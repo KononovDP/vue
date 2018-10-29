@@ -1,0 +1,122 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #111111;
+    font-family: 'HelveticaNeue-Bold';
+    font-size: 13px;
+    line-height: 20px;
+    color: #ffffff;
+}
+h1 {
+    font-size: 128px;
+    line-height: 153px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+p {
+    margin: 30px 0;
+}
+a {
+    text-decoration: none;
+}
+strong {
+    font-weight: bold;
+}
+.hidden {
+    display: none !important;
+}
+.clearfix:after, .clearfix:before {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+.text-overflow {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*for-img */
+.for-img {
+    text-align: center;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+/*cover-img */
+.cover-img {
+    position: relative;
+    overflow: hidden;
+}
+.cover-img:before {
+    display: block;
+    content: "";
+}
+.cover-img .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+/*contain-img */
+.contain-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.contain-img:before {
+    display: block;
+    content: "";
+}
+.contain-img .image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+/**/
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.main {
+    flex: 1 1 100%;
+}
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 0 24px;
+}

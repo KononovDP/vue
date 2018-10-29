@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  min-width: 223px;
+  padding: 8px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  box-shadow: 0 2px 40px 0 rgba(65, 25, 102, 0.12);
+  transition: all .3s;
+  &:hover {
+    background: #ffffff;
+    color: #111111;
+  }
+}

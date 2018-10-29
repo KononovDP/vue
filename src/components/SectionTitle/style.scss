@@ -1,0 +1,24 @@
+.section-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 -24px;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  &:before {
+    display: inline-block;
+    vertical-align: super;
+    content: '';
+    width: 215px;
+    height: 2px;
+    background: #ffffff;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 48px;
+    max-height: 48px;
+    margin: 0 8px;
+  }
+}

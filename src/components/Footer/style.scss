@@ -1,0 +1,29 @@
+.footer {
+  padding: 23px 0 22px;
+  background: #000000;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left {
+  font-size: 12px;
+  line-height: 19px;
+  color: rgba(255,255,255,.2);
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+.footer-nav-link {
+  display: inline-block;
+  margin: 0 40px 0 0;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+  &:last-child {
+    margin: 0;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
