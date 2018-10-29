@@ -22,23 +22,15 @@
     <Section className="section-project"
              title="Selected Projects">
       <div class="project-grid">
-        <div class="project" v-for="project in projects">
-          <div class="project-img cover-img">
-            <img :src="project.image" alt="" class="image">
-          </div>
-          <div class="project-descr">
-            <div class="project-header">
-              <div class="project-icon">
-                <img :src="project.imageSmall" alt="">
-              </div>
-              <div class="project-text">
-                <div class="project-title">{{ project.title }}</div>
-                <div class="project-subtitle">{{ project.subtitle }}</div>
-              </div>
-            </div>
-            <div class="body">{{ project.text }}</div>
-          </div>
-        </div>
+        <Project
+                v-for="project in projects"
+                :key="project.id"
+                :image="project.image"
+                :imageSmall="project.imageSmall"
+                :title="project.title"
+                :subtitle="project.subtitle"
+                :text="project.text"
+        ></Project>
       </div>
     </Section>
 
@@ -52,6 +44,7 @@
 
 <script>
 import Section from '@/components/Section';
+import Project from '@/components/Project';
 
 export default {
   name: 'home',
@@ -74,11 +67,28 @@ export default {
           text: 'Air + Style Innsbruck festival engagementTicket sales strategy Strategic brand consulting ' +
           'and development from event to global festival Creative build and execution of festival presence',
         },
+        {
+          image: 'assets/images/projects/project-3.jpg',
+          imageSmall: 'assets/images/projects/project-small-3.png',
+          title: 'Air + Style',
+          subtitle: 'World Wide Snowboard Freestyle and Music festival',
+          text: 'Long term global marketing strategy planning and implementation. Live broadcast production. ' +
+          'Strategic brand consulting and development from event to global festival. Increased revenue stream ' +
+          'through raised ticket sales and sponsorship acquisition ',
+        },
+        {
+          image: 'assets/images/projects/project-4.jpg',
+          imageSmall: 'assets/images/projects/project-small-4.png',
+          title: 'Wake the Line',
+          subtitle: 'Stadium Wakeboard Event',
+          text: 'Live event production. Event programming',
+        },
       ],
     };
   },
   components: {
     Section,
+    Project,
   },
 };
 </script>

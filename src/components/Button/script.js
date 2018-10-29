@@ -2,7 +2,7 @@ export default {
   props: {
     buttonLink: {
       type: String,
-      required: false,
+      required: true,
     },
   },
 };

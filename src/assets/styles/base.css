@@ -120,3 +120,7 @@ img {
     margin: 0 auto;
     padding: 0 24px;
 }
+.project-grid {
+    column-count:  4;
+    column-gap: 16px;
+}
