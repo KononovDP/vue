@@ -1,0 +1,46 @@
+.animated {
+  position: relative;
+  max-width: 200px;
+  margin: 100px auto;
+  text-align: center;
+  .title_animated {
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: all .3s cubic-bezier(.46,.25,.63,.82);
+  }
+  .sibtitles_animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+  .sibtitle_animated {
+    opacity: 0;
+    transition: all .3s cubic-bezier(.46,.25,.63,.82);
+  }
+  .sibtitle_animated:nth-child(odd) {
+    transform: translateX(-100px)
+  }
+  .sibtitle_animated:nth-child(even) {
+    transform: translateX(100px)
+  }
+}
+.animated:hover {
+  .title_animated {
+    opacity: 0;
+  }
+  .sibtitle_animated {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

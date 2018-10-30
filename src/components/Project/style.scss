@@ -1,7 +1,75 @@
 .project {
   display: block;
   margin-bottom: 16px;
+  background: #1a1a1a;
+  box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.38);
   border: 1px solid red;
   font-size: 14px;
   line-height: 20px;
+  .project-img:before {
+    padding-top: 61%;
+  }
+  .project-descr {
+    padding: 12px 16px;
+  }
+  .project-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 0;
+  }
+  .project-icon {
+    flex: 0 0 59px;
+    display: block;
+    width: 59px;
+    margin-right: 16px;
+    outline: 1px solid red;
+    &:before {
+      padding-top: 100%;
+    }
+  }
+  .project-text {
+    flex: 0 1 100%;
+  }
+  .project-title {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .project-subtitle {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .project-body {
+    padding: 12px 0;
+  }
+  .btn {
+    display: inline-block;
+    min-width: 100px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    box-shadow: 0 2px 40px 0 rgba(65, 25, 102, 0.12);
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+  }
+  .project-full {
+    display: flex;
+    height: 100%;
+  }
+  .project-full-image {
+    width: 63.638%;
+  }
+  .project-full-text {
+    width: 36.362%;
+    padding: 16px;
+    font-size: 14px;
+  }
 }

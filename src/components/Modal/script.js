@@ -1,10 +1,10 @@
 export default {
   props: {
-    buttonClass: {
+    title: {
       type: String,
-      required: true,
+      required: false,
     },
-    buttonLink: {
+    text: {
       type: String,
       required: false,
     },

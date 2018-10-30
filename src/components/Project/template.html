@@ -4,14 +4,28 @@
     </div>
     <div class="project-descr">
         <div class="project-header">
-            <div class="project-icon">
-                <img :src="imageSmall" alt="">
+            <div class="project-icon contain-img">
+                <img :src="imageSmall" alt="" class="image">
             </div>
             <div class="project-text">
                 <div class="project-title">{{ title }}</div>
                 <div class="project-subtitle">{{ subtitle }}</div>
             </div>
         </div>
-        <div class="body">{{ text }}</div>
+        <div class="project-body" :title="text">{{ text | truncate(60, '...') }}</div>
+        <!--Button :buttonClass="'btn btn_sm'" @click="showModal=true">Show Detail</Button-->
+        <button class="btn" @click="showModal=true">Show Detail</button>
     </div>
+
+    <modal v-if="showModal" @close="showModal = false">
+        <h3 slot="header">//{{ title }}</h3>
+            <div slot="body" class="project-full">
+                <div class="project-full-image cover-img">
+                    <img :src="imageBig" alt="" class="image">
+                </div>
+                <div class="project-full-text">
+                    {{ text }}
+                </div>
+            </div>
+    </modal>
 </div>

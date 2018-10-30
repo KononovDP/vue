@@ -1,8 +1,7 @@
 <template>
   <div class="main home">
-    <Section className="section-home"
-             title="This is"
-             sectionImage="../assets/images/burger.svg">
+    <Section className="section-home">
+      <sectionTitle :sectionTitle="'This is'" :sectionImage="'../assets/images/burger.svg'"></sectionTitle>
       <vue-typed-js
               :strings="['Brand', 'Event', 'Business', 'Career']"
               :startDelay="1000"
@@ -19,8 +18,8 @@
       </vue-typed-js>
     </Section>
 
-    <Section className="section-project"
-             title="Selected Projects">
+    <Section className="section-project">
+      <sectionTitle :sectionTitle="'Selected Projects'"></sectionTitle>
       <div class="project-grid">
         <Project
                 v-for="project in projects"
@@ -34,17 +33,35 @@
       </div>
     </Section>
 
-    <Section className="section-service"
-             title="Our Services"></Section>
+    <Section className="section-service">
+      <sectionTitle :sectionTitle="'Our Services'"></sectionTitle>
+    </Section>
 
-    <Section className="section-about"
-             title="About Us"></Section>
+    <Section className="section-about">
+      <sectionTitle :sectionTitle="'About Us'"></sectionTitle>
+    </Section>
+
+    <AnimateTitle
+            :title="'ideas.'"
+            :subtitles="['inspiretion', 'imagination', 'abstraction']"
+    ></AnimateTitle>
+    <AnimateTitle
+            :title="'brains.'"
+            :subtitles="['designation', 'conception', 'definition']"
+    ></AnimateTitle>
+    <AnimateTitle
+            :title="'quest.'"
+            :subtitles="['implementation', 'execution', 'conclusion']"
+    ></AnimateTitle>
+
   </div>
 </template>
 
 <script>
 import Section from '@/components/Section';
+import SectionTitle from '@/components/SectionTitle';
 import Project from '@/components/Project';
+import AnimateTitle from '@/components/AnimateTitle';
 
 export default {
   name: 'home',
@@ -89,6 +106,8 @@ export default {
   components: {
     Section,
     Project,
+    SectionTitle,
+    AnimateTitle,
   },
 };
 </script>

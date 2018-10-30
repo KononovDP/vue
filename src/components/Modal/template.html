@@ -1,0 +1,20 @@
+<transition name="popup">
+    <div class="popup-overlay">
+        <div class="popup">
+            <div class="popup-header">
+                <slot name="header"></slot>
+                <button class="popup-close" @click="$emit('close')">
+                    <img src="../../assets/images/close.svg" alt="">
+                </button>
+            </div>
+
+            <div class="popup-body">
+                <slot name="body"></slot>
+            </div>
+
+            <div class="popup-footer">
+                <slot name="footer"></slot>
+            </div>
+        </div>
+    </div>
+</transition>
