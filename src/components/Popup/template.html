@@ -1,9 +1,9 @@
 <transition name="popup">
     <div class="popup-overlay">
-        <div class="popup">
+        <div class="popup" :class="className">
             <div class="popup-header">
                 <slot name="header"></slot>
-                <button class="popup-close" @click="$emit('close')">
+                <button class="popup-close" @click="closePopup">
                     <img src="../../assets/images/close.svg" alt="">
                 </button>
             </div>

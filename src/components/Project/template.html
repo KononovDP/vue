@@ -1,23 +1,23 @@
 <div class="project">
-    <div class="project-img cover-img">
-        <img :src="image" alt="" class="image">
-    </div>
-    <div class="project-descr">
-        <div class="project-header">
-            <div class="project-icon contain-img">
-                <img :src="imageSmall" alt="" class="image">
-            </div>
-            <div class="project-text">
-                <div class="project-title">{{ title }}</div>
-                <div class="project-subtitle">{{ subtitle }}</div>
-            </div>
+    <div @click="showPopup=true">
+        <div class="project-img cover-img">
+            <img :src="image" alt="" class="image">
         </div>
-        <div class="project-body" :title="text">{{ text | truncate(60, '...') }}</div>
-        <!--Button :buttonClass="'btn btn_sm'" @click="showModal=true">Show Detail</Button-->
-        <button class="btn" @click="showModal=true">Show Detail</button>
+        <div class="project-descr">
+            <div class="project-header">
+                <div class="project-icon contain-img">
+                    <img :src="imageSmall" alt="" class="image">
+                </div>
+                <div class="project-text">
+                    <div class="project-title">{{ title }}</div>
+                    <div class="project-subtitle">{{ subtitle }}</div>
+                </div>
+            </div>
+            <div class="project-body" :title="text">{{ text | truncate(50, '...') }}</div>
+        </div>
     </div>
 
-    <modal v-if="showModal" @close="showModal = false">
+    <Popup v-if="showPopup" @close="showPopup=false">
         <h3 slot="header">//{{ title }}</h3>
             <div slot="body" class="project-full">
                 <div class="project-full-image cover-img">
@@ -27,5 +27,5 @@
                     {{ text }}
                 </div>
             </div>
-    </modal>
+    </Popup>
 </div>

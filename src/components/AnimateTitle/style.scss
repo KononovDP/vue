@@ -1,7 +1,7 @@
 .animated {
   position: relative;
   max-width: 200px;
-  margin: 100px auto;
+  margin: 10px 0;
   text-align: center;
   .title_animated {
     font-size: 48px;
@@ -20,8 +20,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
     text-transform: uppercase;
   }
   .sibtitle_animated {

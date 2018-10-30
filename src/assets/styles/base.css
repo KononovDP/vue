@@ -124,3 +124,57 @@ img {
     column-count:  4;
     column-gap: 16px;
 }
+/*OUR SERVICES*/
+.service-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+.service-left,
+.service-right {
+    flex: 1 1 auto;
+    padding: 0 40px;
+}
+.service-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 484px;
+    height: 484px;
+    padding: 50px;
+    background: transparent url(../../assets/images/service-circle.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.service-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+.service-list li {
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+}
+.service-list li:nth-child(odd) {
+    justify-content: flex-start;
+}
+.service-list li:nth-child(even) {
+    justify-content: center;
+}
+.service-link {
+    font-size: 22px;
+    line-height: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all .3s;
+}
+.service-wrap:hover .service-link {
+    color: rgba(255,255,255,.3)
+}
+.service-wrap .service-link:hover {
+    color: #ffffff;
+}

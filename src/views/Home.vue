@@ -1,7 +1,7 @@
 <template>
   <div class="main home">
     <Section className="section-home">
-      <sectionTitle :sectionTitle="'This is'" :sectionImage="'../assets/images/burger.svg'"></sectionTitle>
+      <SectionTitle :sectionTitle="'This is'" :sectionImage="'../assets/images/burger.svg'"></SectionTitle>
       <vue-typed-js
               :strings="['Brand', 'Event', 'Business', 'Career']"
               :startDelay="1000"
@@ -19,7 +19,7 @@
     </Section>
 
     <Section className="section-project">
-      <sectionTitle :sectionTitle="'Selected Projects'"></sectionTitle>
+      <SectionTitle :sectionTitle="'Selected Projects'"></SectionTitle>
       <div class="project-grid">
         <Project
                 v-for="project in projects"
@@ -34,25 +34,43 @@
     </Section>
 
     <Section className="section-service">
-      <sectionTitle :sectionTitle="'Our Services'"></sectionTitle>
+      <SectionTitle :sectionTitle="'Our Services'"></SectionTitle>
+      <div class="service-wrap">
+        <div class="service-left">
+          <ul class="service-list">
+            <li><a href="#" class="service-link">//Event <br />production</a></li>
+            <li><a href="#" class="service-link">//Strategic <br />business <br/>development</a></li>
+          </ul>
+        </div>
+        <div class="service-center">
+          <div class="service-circle">
+            <AnimateTitle
+                    :title="'ideas.'"
+                    :subtitles="['inspiretion', 'imagination', 'abstraction']"
+            ></AnimateTitle>
+            <AnimateTitle
+                    :title="'brains.'"
+                    :subtitles="['designation', 'conception', 'definition']"
+            ></AnimateTitle>
+            <AnimateTitle
+                    :title="'quest.'"
+                    :subtitles="['implementation', 'execution', 'conclusion']"
+            ></AnimateTitle>
+          </div>
+        </div>
+        <div class="service-right">
+          <ul class="service-list">
+            <li><a href="#" class="service-link">//Marketing <br />solutions</a></li>
+            <li><a href="#" class="service-link">//Concept <br />architecture</a></li>
+          </ul>
+        </div>
+      </div>
     </Section>
 
     <Section className="section-about">
-      <sectionTitle :sectionTitle="'About Us'"></sectionTitle>
+      <SectionTitle :sectionTitle="'About Us'"></SectionTitle>
+      <About></About>
     </Section>
-
-    <AnimateTitle
-            :title="'ideas.'"
-            :subtitles="['inspiretion', 'imagination', 'abstraction']"
-    ></AnimateTitle>
-    <AnimateTitle
-            :title="'brains.'"
-            :subtitles="['designation', 'conception', 'definition']"
-    ></AnimateTitle>
-    <AnimateTitle
-            :title="'quest.'"
-            :subtitles="['implementation', 'execution', 'conclusion']"
-    ></AnimateTitle>
 
   </div>
 </template>
@@ -62,6 +80,7 @@ import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import Project from '@/components/Project';
 import AnimateTitle from '@/components/AnimateTitle';
+import About from '@/components/About';
 
 export default {
   name: 'home',
@@ -108,6 +127,7 @@ export default {
     Project,
     SectionTitle,
     AnimateTitle,
+    About,
   },
 };
 </script>

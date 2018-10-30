@@ -3,9 +3,14 @@
   margin-bottom: 16px;
   background: #1a1a1a;
   box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.38);
-  border: 1px solid red;
+  border: 2px solid transparent;
   font-size: 14px;
   line-height: 20px;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    border-color: #ffffff
+  }
   .project-img:before {
     padding-top: 61%;
   }

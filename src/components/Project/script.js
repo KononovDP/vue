@@ -1,10 +1,9 @@
-import Modal from '@/components/Modal';
-import Button from '@/components/Button';
+import Popup from '@/components/Popup';
 
 export default {
   data() {
     return {
-      showModal: false,
+      showPopup: false,
     };
   },
   props: {
@@ -34,8 +33,7 @@ export default {
     },
   },
   components: {
-    Modal,
-    Button,
+    Popup,
   },
   filters: {
     truncate(text, length, suffix) {

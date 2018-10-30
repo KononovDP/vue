@@ -1,0 +1,22 @@
+<div class="about">
+    <p class="about-title">Lorem Ipsum is simply dummy text</p>
+    <div class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.</div>
+    <div class="about-action">
+        <span @click="showPopup=true">fghfg</span>
+        <Button :buttonClass="'btn btn_sm'"
+                :buttonLink="''"
+                @click.prevent="showPopup=true"
+        >Learn More</Button>
+    </div>
+
+    <Popup v-if="showPopup"
+           className="text-left"
+           @close="showPopup=false">
+        <h3 slot="header">//{{ title }}</h3>
+        <div slot="body">
+            {{ text }}
+        </div>
+    </Popup>
+</div>
