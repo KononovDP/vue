@@ -110,7 +110,7 @@ img {
     flex-direction: column;
     width: 100%;
 }
-.main {
+.wrapper {
     flex: 1 1 100%;
 }
 .container {

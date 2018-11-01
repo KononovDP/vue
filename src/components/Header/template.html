@@ -10,7 +10,12 @@
                     <div class="header-menu-inner">
                         <a href="#" class="header-logo for-img"><img src="../../assets/images/logo.svg" alt=""></a>
                         <nav class="header-nav nav">
-                            <a v-for="menuLink in menu" :href="menuLink.url" :title="menuLink.text" class="nav-link">// {{ menuLink.text }}</a>
+                            <router-link class="nav-link"
+                                         v-for="menuLink in menu"
+                                         :key="menuLink.text"
+                                         :to="menuLink.url"
+                                         :title="menuLink.text"
+                                         @click.native="activeMenu = !activeMenu">// {{ menuLink.text }}</router-link>
                         </nav>
                     </div>
                 </div>

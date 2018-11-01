@@ -1,7 +1,9 @@
 <template>
   <div id="app" :style="{ paddingTop: `${paddingTop}px` }">
     <Header @set-header-height="setPaddingTop"></Header>
-    <router-view/>
+    <div class="wrapper">
+      <router-view/>
+    </div>
     <Footer></Footer>
   </div>
 </template>

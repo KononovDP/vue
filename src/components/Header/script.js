@@ -2,10 +2,10 @@ export default {
   data() {
     return {
       menu: [
-        { text: 'Our Projects', url: '#projects' },
-        { text: 'Our Services', url: '#services' },
-        { text: 'About', url: '#about' },
-        { text: 'Contact', url: '#contact' },
+        { text: 'Home', url: '/' },
+        { text: 'About', url: 'about' },
+        { text: 'Blog', url: 'blog' },
+        { text: 'Contact', url: 'contact' },
       ],
       activeMenu: false,
     };

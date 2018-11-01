@@ -1,5 +1,5 @@
 <template>
-  <div class="main home">
+  <div class="home">
     <Section className="section-home">
       <SectionTitle :sectionTitle="'This is'" :sectionImage="'../assets/images/burger.svg'"></SectionTitle>
       <vue-typed-js
